@@ -1,3 +1,3 @@
-import { YellowBox, AppRegistry } from "react-native";
+import { YellowBox } from 'react-native';
 
 YellowBox.ignoreWarnings(['unknown call: "relay:check"']);
