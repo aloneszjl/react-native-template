@@ -28,14 +28,26 @@ const styles = StyleSheet.create({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+type State = { test: string };
+
+class App extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      test: '123',
+    };
+  }
+
   render() {
+    const { test } = this.state;
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to my React Native App!</Text>
-        <Text style={styles.instructions}>To get starteds</Text>
+        <Text style={styles.instructions}>To get starteds{test}</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     );
   }
 }
+
+export default App;

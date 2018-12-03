@@ -32,6 +32,9 @@ emoji=true
 esproposal.optional_chaining=enable
 esproposal.nullish_coalescing=enable
 
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
 module.system=haste
 module.system.haste.use_name_reducers=true
 # get basename

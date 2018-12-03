@@ -7,9 +7,11 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
+    "flow": "flow",
     "test": "jest"
   },
   "dependencies": {
+    "flow-bin": "^0.78.0",
     "react": "16.6.1",
     "react-native": "0.57.7",
     "react-native-gesture-handler": "^1.0.10",
