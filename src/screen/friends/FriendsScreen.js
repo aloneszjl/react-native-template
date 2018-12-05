@@ -1,9 +1,10 @@
 // @flow
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-const FriendsScreen = () => (
+const FriendsScreen = ({ navigation }: { navigation: Object }) => (
   <View>
+    <Button title="Holdings" onPress={() => navigation.navigate('Holdings')} />
     <Text>朋友</Text>
   </View>
 );
