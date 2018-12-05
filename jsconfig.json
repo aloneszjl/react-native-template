@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["./src/compontnts/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

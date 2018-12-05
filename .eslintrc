@@ -17,7 +17,18 @@
         "singleQuote": true,
         "printWidth": 100
       }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["src/"]
+      }
     ]
   },
-  "plugins": ["prettier", "flowtype"]
+  "plugins": ["prettier", "flowtype"],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
 }

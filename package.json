@@ -17,14 +17,17 @@
     "react-native-gesture-handler": "^1.0.10",
     "react-native-svg": "^8.0.8",
     "react-native-svg-uri": "^1.2.3",
-    "react-navigation": "^3.0.4"
+    "react-navigation": "^3.0.4",
+    "styled-components": "^4.1.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
+    "babel-plugin-module-resolver": "^3.1.1",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-flowtype": "^3.2.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",

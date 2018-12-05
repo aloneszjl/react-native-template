@@ -1,6 +1,14 @@
 // @flow
 import React from 'react';
-import { View, Text } from 'react-native';
+import styled from 'styled-components';
+
+const View = styled.View`
+  background-color: papayawhip;
+`;
+
+const Text = styled.Text`
+  color: palevioletred;
+`;
 
 const HomeScreen = () => (
   <View>

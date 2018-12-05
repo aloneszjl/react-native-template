@@ -27,6 +27,7 @@ node_modules/react-native/flow/
 node_modules/react-native/flow-github/
 
 [options]
+module.name_mapper='^src' ->'<PROJECT_ROOT>/src'
 emoji=true
 
 esproposal.optional_chaining=enable
