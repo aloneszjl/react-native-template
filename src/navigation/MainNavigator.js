@@ -27,14 +27,10 @@ const MainNavigator = createStackNavigator(
     },
   },
   {
+    headerLayoutPreset: 'center',
+    headerMode: 'screen',
     defaultNavigationOptions: {
-      headerTitleStyle: {
-        textAlign: 'center',
-        alignSelf: 'center',
-        flex: 1,
-        fontWeight: 'normal',
-      },
-      headerTintColor: '#606060',
+      headerTintColor: '#333333',
     },
     headerBackTitleVisible: false,
   }

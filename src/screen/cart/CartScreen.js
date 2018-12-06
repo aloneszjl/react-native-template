@@ -1,9 +1,10 @@
 // @flow
 import React, { PureComponent } from 'react';
-import { View, StatusBar, Platform } from 'react-native';
+import { View, StatusBar, Platform, TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
 import Icon from 'src/components/Icon';
 import { SafeAreaView } from 'react-navigation';
+import { goProfile } from 'src/navigation';
 
 const Background = styled(SafeAreaView)`
   padding: 10px;
@@ -45,6 +46,13 @@ class CartScreen extends PureComponent<Props> {
         <Icon name="Cart" />
         <View style={{ height: 50 }} />
         <Text>购物车</Text>
+        <TouchableOpacity
+          onPress={() => {
+            goProfile('TabCart');
+          }}
+        >
+          <Text>个人持仓</Text>
+        </TouchableOpacity>
       </Background>
     );
   }
