@@ -1,45 +1,22 @@
 // @flow
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { StackActions, NavigationActions } from 'react-navigation';
+import { resetToProfile } from 'src/navigation';
 
-const resetAction = StackActions.reset({
-  index: 0,
-  key: null,
-  actions: [
-    NavigationActions.navigate({
-      routeName: 'Main',
-      action: NavigationActions.navigate({
-        routeName: 'TabCart',
-      }),
-    }),
-  ],
-});
-
-const HoldingsScreen = ({ navigation }: { navigation: Object }) => (
+const HoldingsScreen = () => (
   <View>
+    <View style={{ height: 100 }} />
     <TouchableOpacity
       onPress={() => {
-        Promise.resolve()
-          .then(() => {
-            navigation.dispatch(resetAction);
-          })
-          .then(() => {
-            navigation.dispatch(
-              NavigationActions.navigate({
-                routeName: 'Profile',
-              })
-            );
-          });
+        resetToProfile('TabCart');
       }}
     >
       <Text>个人持仓</Text>
     </TouchableOpacity>
   </View>
 );
-
-HoldingsScreen.navigationOptions = {
+HoldingsScreen.navigationOptions = () => ({
   title: 'Holdings',
-};
+});
 
 export default HoldingsScreen;

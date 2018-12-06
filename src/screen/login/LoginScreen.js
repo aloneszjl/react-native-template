@@ -1,8 +1,10 @@
 // @flow
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import get from 'lodash/get';
 import styled from 'styled-components';
 import Icon from 'src/components/Icon';
+import navigationService from 'src/navigation/NavigationService';
 
 const View = styled.View`
   background-color: papayawhip;
@@ -16,9 +18,13 @@ const LoginScreen = ({ navigation }: { navigation: Object }) => (
   <View>
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate({
-          routeName: 'Profile',
-        });
+        const navigationParams = get(navigation, 'state.params') || {};
+        const { routeName, ...params } = navigationParams;
+        navigationService.auth();
+        if (!routeName) {
+          navigation.pop();
+        }
+        navigationService.navigate({ routeName, params });
       }}
     >
       <Text>登录</Text>

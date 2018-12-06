@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation';
 import MainNavigator from './MainNavigator';
 import ModalNavigator from './ModalNavigator';
 
-const StackNavigator = createStackNavigator(
+const RootNavigator = createStackNavigator(
   {
     Main: { screen: MainNavigator },
     Modal: { screen: ModalNavigator },
@@ -16,4 +16,4 @@ const StackNavigator = createStackNavigator(
   }
 );
 
-export default StackNavigator;
+export default RootNavigator;
