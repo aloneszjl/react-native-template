@@ -14,7 +14,7 @@ const Text = styled.Text`
 const HomeScreen = ({ navigation }: { navigation: Object }) => (
   <View>
     <Button title="login" onPress={() => navigation.navigate('Login', {})} />
-    <Text>首页</Text>
+    <Text>首页nihao</Text>
   </View>
 );
 

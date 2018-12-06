@@ -2,9 +2,10 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { resetToProfile } from 'src/navigation';
+import { SafeAreaView } from 'react-navigation';
 
 const HoldingsScreen = () => (
-  <View>
+  <SafeAreaView>
     <View style={{ height: 100 }} />
     <TouchableOpacity
       onPress={() => {
@@ -13,10 +14,12 @@ const HoldingsScreen = () => (
     >
       <Text>个人持仓</Text>
     </TouchableOpacity>
-  </View>
+  </SafeAreaView>
 );
-HoldingsScreen.navigationOptions = () => ({
+
+HoldingsScreen.navigationOptions = {
+  headerTransparent: true,
   title: 'Holdings',
-});
+};
 
 export default HoldingsScreen;

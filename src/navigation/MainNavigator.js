@@ -22,9 +22,20 @@ const MainNavigator = createStackNavigator(
       }),
     },
     Holdings: { screen: HoldingsScreen },
-    Profile: { screen: ProfileScreen },
+    Profile: {
+      screen: ProfileScreen,
+    },
   },
   {
+    defaultNavigationOptions: {
+      headerTitleStyle: {
+        textAlign: 'center',
+        alignSelf: 'center',
+        flex: 1,
+        fontWeight: 'normal',
+      },
+      headerTintColor: '#606060',
+    },
     headerBackTitleVisible: false,
   }
 );

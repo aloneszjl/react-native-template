@@ -12,7 +12,7 @@ const RootNavigator = createStackNavigator(
     initialRouteName: 'Main',
     mode: 'modal',
     headerMode: 'none',
-    headerBackTitleVisible: false,
+    headerLeft: null,
   }
 );
 

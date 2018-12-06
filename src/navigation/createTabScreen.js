@@ -37,6 +37,14 @@ const createTabScreen = (tabConfig: Object) => {
 
     return {
       headerTitle,
+      headerTransparent: routeName === 'Cart',
+      headerTitleStyle: {
+        color: routeName === 'Cart' ? 'white' : 'black',
+        textAlign: 'center',
+        alignSelf: 'center',
+        flex: 1,
+        fontWeight: 'normal',
+      },
     };
   };
   return TabScreen;

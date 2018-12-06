@@ -45,7 +45,7 @@ LoginScreen.navigationOptions = ({ navigation }) => ({
         navigation.pop();
       }}
     >
-      <Icon name="cross" />
+      <Icon fill="#606060" name="cross" />
     </TouchableOpacity>
   ),
 });
