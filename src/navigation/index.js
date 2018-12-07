@@ -5,6 +5,10 @@ export const goLogin = params => {
   navigationService.navigate({ params, routeName: 'Login' });
 };
 
+export const goTransition = params => {
+  navigationService.navigate({ params, routeName: 'Transition' });
+};
+
 export const goHoldings = params => {
   navigationService.authNavigate({ params, routeName: 'Holdings' });
 };

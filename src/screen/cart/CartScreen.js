@@ -4,7 +4,7 @@ import { View, StatusBar, Platform, TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
 import Icon from 'src/components/Icon';
 import { SafeAreaView } from 'react-navigation';
-import { goProfile } from 'src/navigation';
+import { goTransition } from 'src/navigation/index';
 
 const Background = styled(SafeAreaView)`
   padding: 10px;
@@ -48,7 +48,7 @@ class CartScreen extends PureComponent<Props> {
         <Text>购物车</Text>
         <TouchableOpacity
           onPress={() => {
-            goProfile('TabCart');
+            goTransition({});
           }}
         >
           <Text>个人持仓</Text>

@@ -1,22 +1,32 @@
 // @flow
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 import get from 'lodash/get';
 import styled from 'styled-components';
-import Icon from 'src/components/Icon';
 import navigationService from 'src/navigation/NavigationService';
+import { Button, Input, Divider } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/AntDesign';
 
-const View = styled.View`
-  background-color: papayawhip;
+const Container = styled(View)`
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
 `;
-
-const Text = styled.Text`
-  color: palevioletred;
-`;
-
 const LoginScreen = ({ navigation }: { navigation: Object }) => (
-  <View>
-    <TouchableOpacity
+  <Container>
+    <Divider style={{ backgroundColor: 'white', height: 10 }} />
+    <Input placeholder="demo" leftIcon={<Icon name="user" size={24} color="black" />} />
+    <Divider style={{ backgroundColor: 'white', height: 10 }} />
+
+    <Input placeholder="demo" leftIcon={<Icon name="key" size={24} color="black" />} />
+    <Divider style={{ backgroundColor: 'white', height: 10 }} />
+    <Button
+      raised
+      buttonStyle={{
+        width: '100%',
+        borderRadius: 10,
+      }}
+      title="登录"
       onPress={() => {
         const navigationParams = get(navigation, 'state.params') || {};
         const { routeName, ...params } = navigationParams;
@@ -26,27 +36,26 @@ const LoginScreen = ({ navigation }: { navigation: Object }) => (
         }
         navigationService.navigate({ routeName, params });
       }}
-    >
-      <Text>登录</Text>
-    </TouchableOpacity>
-  </View>
+    />
+  </Container>
 );
 
 LoginScreen.navigationOptions = ({ navigation }) => ({
   title: 'Login',
   headerLeft: (
-    <TouchableOpacity
-      style={{
+    <Button
+      buttonStyle={{
         paddingHorizontal: 8.5,
         paddingVertical: 3,
-        marginTop: 3,
+        marginTop: 5,
       }}
       onPress={() => {
         navigation.pop();
       }}
-    >
-      <Icon width={17} height={17} fill="#333333" name="cross" />
-    </TouchableOpacity>
+      title=""
+      clear
+      icon={<Icon size={20} color="#333333" name="close" />}
+    />
   ),
 });
 
