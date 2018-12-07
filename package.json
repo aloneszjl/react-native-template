@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "lint-staged": "LIST=`git diff-index --name-only --diff-filter=d HEAD | grep .*\\.js | grep -v json`; if [ \"$LIST\" ]; then eslint --no-eslintrc -c commit-eslint.json --fix $LIST; fi",
     "postinstall": "rndebugger-open",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "react-native run-ios",
@@ -38,6 +39,10 @@
     "rxjs": "^6.3.3",
     "styled-components": "^4.1.2"
   },
+  "pre-commit": [
+    "lint-staged",
+    "flow"
+  ],
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
@@ -53,6 +58,7 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.50.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.15.3",
     "react-native-debugger-open": "^0.3.17",
     "react-test-renderer": "16.6.1"
