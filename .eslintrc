@@ -23,7 +23,8 @@
       {
         "ignore": ["src/"]
       }
-    ]
+    ],
+    "import/prefer-default-export": 0
   },
   "plugins": ["prettier", "flowtype"],
   "settings": {

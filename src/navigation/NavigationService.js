@@ -5,6 +5,7 @@ type NavigationState = {
   params?: Object,
   action: Object,
 };
+
 class NavigationService {
   constructor() {
     this.isAuthenticated = false;
@@ -12,6 +13,10 @@ class NavigationService {
 
   setNavigator = navigator => {
     this.navigator = navigator;
+  };
+
+  setStore = store => {
+    this.store = store;
   };
 
   auth = () => {
