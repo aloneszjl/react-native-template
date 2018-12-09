@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
-import { Button } from 'react-native';
 import styled from 'styled-components';
+import Touchable from 'src/components/Touchable';
 
 const View = styled.View`
   background-color: papayawhip;
@@ -13,7 +13,9 @@ const Text = styled.Text`
 
 const HomeScreen = ({ navigation }: { navigation: Object }) => (
   <View>
-    <Button title="login" onPress={() => navigation.navigate('Login', {})} />
+    <Touchable style={{ height: 30 }} onPress={() => navigation.navigate('Login', {})}>
+      <Text>登录</Text>
+    </Touchable>
     <Text>首页nihao</Text>
   </View>
 );
